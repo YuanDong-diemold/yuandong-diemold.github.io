@@ -8,10 +8,7 @@
         /* 基础设置 */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* 修改1：引入云端行楷字体（这里用的是马善政行楷，开源免费，非常适合网页） */
-        @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
-
-        /* 修改2：全局字体保持微软雅黑，保证阅读清晰度 */
+        /* 全局字体使用微软雅黑，保证所有设备阅读清晰 */
         body { font-family: 'Microsoft YaHei', sans-serif; color: #333; line-height: 1.6; background-color: #f8f9fa; }
         a { text-decoration: none; color: inherit; }
         
@@ -20,17 +17,13 @@
 
         /* 顶部导航 */
         header { background: var(--primary); color: var(--light); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        
-        /* 修改3：把厂名Logo换成行楷，并放大一点 */
-        .logo { font-family: 'Ma Shan Zheng', cursive; font-size: 32px; font-weight: bold; letter-spacing: 2px; }
+        .logo { font-size: 26px; font-weight: bold; letter-spacing: 1px; }
         .logo span { color: var(--accent); }
         .nav-contact { font-size: 22px; font-weight: bold; }
 
         /* 首屏横幅 */
-        .hero { background: linear-gradient(rgba(11, 61, 145, 0.85), rgba(11, 61, 145, 0.85)), url('https://images.unsplash.com/photo-1565514020179-026b92b84bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--light); padding: 150px 5%; text-align: center; }
-        
-        /* 修改4：首屏大标题换成行楷 */
-        .hero h1 { font-family: 'Ma Shan Zheng', cursive; font-size: 52px; margin-bottom: 0; font-weight: normal; letter-spacing: 2px; }
+        .hero { background: linear-gradient(rgba(11, 61, 145, 0.85), rgba(11, 61, 145, 0.85)), url('https://images.unsplash.com/photo-1565514020179-026b92b84bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--light); padding: 120px 5%; text-align: center; }
+        .hero h1 { font-size: 42px; margin-bottom: 0; }
 
         /* 公共标题样式 */
         .section-title { text-align: center; font-size: 32px; margin-bottom: 40px; color: var(--primary); position: relative; }
@@ -41,21 +34,24 @@
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .feature-card { background: #f8f9fa; padding: 35px 25px; border-radius: 10px; text-align: center; border-top: 4px solid var(--primary); transition: 0.3s; }
         .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+        
+        /* 删除了表情后的标题 */
         .feature-card h3 { font-size: 24px; margin-bottom: 15px; color: var(--primary); }
         .feature-card p { color: var(--black); font-size: 20px; line-height: 1.8; }
 
         /* 关于我们区块 */
         .about { padding: 80px 5%; background: #f0f4f8; }
         .about-content { max-width: 900px; margin: 0 auto; background: var(--light); padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        
-        /* 修改5：关于我们的副标题换成行楷 */
-        .about-content h3 { font-family: 'Ma Shan Zheng', cursive; color: var(--primary); font-size: 32px; margin-bottom: 20px; text-align: center; font-weight: normal; letter-spacing: 1px; }
-        
+        .about-content h3 { color: var(--primary); font-size: 24px; margin-bottom: 20px; text-align: center; }
         .about-content p { font-size: 18px; color: var(--black); line-height: 2; margin-bottom: 20px; text-indent: 2em; }
         .about-content p:last-child { margin-bottom: 0; }
 
-        /* 图纸与实力展示区 */
+        /* 图纸展示区（修改了标题部分） */
         .gallery { padding: 80px 5%; background: var(--light); }
+        .gallery-header { text-align: center; margin-bottom: 40px; }
+        .gallery-header h2 { font-size: 32px; color: var(--primary); margin-bottom: 15px; }
+        .gallery-header p { font-size: 18px; color: var(--black); }
+        
         .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
         .gallery-item { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; }
         .gallery-item img { width: 100%; height: 200px; object-fit: contain; display: block; transition: 0.3s; }
@@ -99,16 +95,15 @@
 
         /* 手机端适配 */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 36px; }
+            .hero h1 { font-size: 28px; }
             .nav-contact { display: none; }
-            .logo { font-size: 26px; }
             .section-title { font-size: 26px; }
             .feature-card p { font-size: 18px; }
             .about-content { padding: 20px; }
-            .about-content h3 { font-size: 26px; }
             .about-content p { font-size: 16px; }
             .client-tag { font-size: 16px; padding: 10px 15px; }
             .contact .highlight { font-size: 28px; }
+            .gallery-header h2 { font-size: 26px; }
         }
     </style>
 </head>
@@ -130,15 +125,18 @@
         <h2 class="section-title">为什么选择远东</h2>
         <div class="grid-3">
             <div class="feature-card">
-                <h3>⚡ 极速交期</h3>
+                <!-- 删除了表情图案 -->
+                <h3>极速交期</h3>
                 <p>常规订单<strong>隔天交货</strong>，加急订单最快<strong>6小时</strong>完成。不耽误客户生产进度。</p>
             </div>
             <div class="feature-card">
-                <h3>🛠️ 硬核设备</h3>
+                <!-- 删除了表情图案 -->
+                <h3>硬核设备</h3>
                 <p>配备嘉洛激光机1500瓦、弯刀机、切线机。硬件实力保证木板刀模切割精度与效率。</p>
             </div>
             <div class="feature-card">
-                <h3>👨‍🏭 资深团队</h3>
+                <!-- 删除了表情图案 -->
+                <h3>资深团队</h3>
                 <p>20多年老厂，核心团队8人，<strong>老师傅平均工龄8年以上</strong>，经验丰富，懂图更懂盒型。</p>
             </div>
         </div>
@@ -154,10 +152,14 @@
         </div>
     </section>
 
-    <!-- 图纸展示 -->
+    <!-- 图纸展示（修改了标题区） -->
     <section class="gallery">
-        <h2 class="section-title">工程图纸与生产实力</h2>
-        <p style="text-align: center; margin-bottom: 40px; font-size: 18px; color: var(--black);">精密的排版与刀线设计，是我们保证精度的第一步</p>
+        <div class="gallery-header">
+            <!-- 删除了原来的主标题，把这句话放大作为标题 -->
+            <h2>精密的排版与刀线设计，是我们保证精度的第一步</h2>
+            <p>日常生产图纸实拍展示</p>
+        </div>
+        
         <div class="gallery-grid">
             <div class="gallery-item"><img src="diemold1.png" alt="刀模排版图1"></div>
             <div class="gallery-item"><img src="diemold2.png" alt="刀模排版图2"></div>
@@ -168,7 +170,7 @@
             <div class="gallery-item"><img src="diemold7.png" alt="刀模排版图7"></div>
             <div class="gallery-item"><img src="diemold8.png" alt="刀模排版图8"></div>
         </div>
-        <p class="gallery-text">* 图为车间日常 CAD 绘图排版实拍（涵盖各类异形盒、月饼盒刀线设计）</p>
+        <p class="gallery-text">* 涵盖各类异形盒、月饼盒刀线设计</p>
     </section>
 
     <!-- 主营业务 -->
@@ -226,7 +228,8 @@
 
     <!-- 联系我们 -->
     <section class="contact" id="contact">
-        <h2 style="font-size: 32px; margin-bottom: 30px; color: #fff;">获取报价 / 发送图纸</h2>
+        <!-- 修改了标题：获取报价 -> 详情咨询 -->
+        <h2 style="font-size: 32px; margin-bottom: 30px; color: #fff;">详情咨询 / 发送图纸</h2>
         <p>请将您的图纸文件（CAD / PDF / AI / CDR）通过微信或电话联系我们</p>
         <div class="highlight">📞 <a href="tel:13719020555">13719020555</a></div>
         <p>（建议您在微信沟通时直接发送图纸，我们看图后立即给您准确答复）</p>
