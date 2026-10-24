@@ -20,11 +20,9 @@
         .nav-contact { font-size: 22px; font-weight: bold; }
 
         /* 首屏横幅 */
-        .hero { background: linear-gradient(rgba(11, 61, 145, 0.85), rgba(11, 61, 145, 0.85)), url('https://images.unsplash.com/photo-1565514020179-026b92b84bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--light); padding: 100px 5%; text-align: center; }
+        .hero { background: linear-gradient(rgba(11, 61, 145, 0.85), rgba(11, 61, 145, 0.85)), url('https://images.unsplash.com/photo-1565514020179-026b92b84bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--light); padding: 120px 5%; text-align: center; }
         .hero h1 { font-size: 42px; margin-bottom: 20px; }
-        .hero p { font-size: 20px; margin-bottom: 40px; opacity: 0.9; }
-        .btn { display: inline-block; background: var(--accent); color: var(--light); padding: 15px 30px; font-size: 18px; border-radius: 5px; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background: #e65c00; transform: translateY(-2px); }
+        .hero p { font-size: 20px; opacity: 0.9; }
 
         /* 核心优势区块 */
         .section-title { text-align: center; font-size: 32px; margin-bottom: 40px; color: var(--primary); position: relative; }
@@ -43,7 +41,7 @@
         .product-item h4 { color: var(--primary); font-size: 20px; margin-bottom: 10px; }
         .product-item p { font-size: 16px; color: var(--black); }
 
-        /* 合作客户区块（新增） */
+        /* 合作客户区块 */
         .clients { padding: 80px 5%; background: var(--light); text-align: center; }
         .client-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 900px; margin: 0 auto; }
         .client-tag { background: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 20px; font-weight: bold; color: var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
@@ -86,11 +84,10 @@
         <div class="nav-contact">☎ 咨询电话: 13719020555</div>
     </header>
 
-    <!-- 首屏横幅 -->
+    <!-- 首屏横幅（已删除按钮） -->
     <section class="hero">
         <h1>专注精品礼盒 · 异形盒 · 皮具刀模定制</h1>
         <p>20年制模经验 / 嘉洛1500W激光机 / 隔天交货，加急6小时</p>
-        <a href="tel:13719020555" class="btn">立即致电：13719020555</a>
     </section>
 
     <!-- 核心优势 -->
@@ -132,7 +129,6 @@
                 <h4>亚克力/皮具刀模</h4>
                 <p>皮具定制专用，切割利落</p>
             </div>
-            <!-- 新增的胶片盒 -->
             <div class="product-item">
                 <h4>胶片盒刀模</h4>
                 <p>高精度切割，边缘平滑</p>
@@ -140,7 +136,7 @@
         </div>
     </section>
 
-    <!-- 合作客户（新增区块） -->
+    <!-- 合作客户 -->
     <section class="clients">
         <h2 class="section-title">知名品牌合作案例</h2>
         <div class="client-list">
@@ -173,14 +169,14 @@
         <div class="highlight">📞 <a href="tel:13719020555">13719020555</a></div>
         <p>（建议您在微信沟通时直接发送图纸，我们看图后立即给您准确答复）</p>
         
-        <!-- 新增的二维码图片显示区 -->
         <div class="qr-code">
-            <!-- 注意：这里的 src="wechat.png" 必须和你上传的图片名字一模一样 -->
+            <!-- 如果你成功上传了图片，这里应该能显示 -->
             <img src="wechat.png" alt="远东刀模微信二维码">
             <p style="font-size: 16px; margin-top: 10px;">长按或扫码添加微信</p>
         </div>
 
-        <p style="margin-top: 40px; font-size: 16px; opacity: 0.8;">地址：请在此处填写您的工厂真实地址</p>
+        <!-- 已补充地址 -->
+        <p style="margin-top: 40px; font-size: 18px; opacity: 0.9;">工厂地址：广州市白云区嘉禾长红村</p>
     </section>
 
     <!-- 底部版权 -->
