@@ -20,9 +20,8 @@
         .nav-contact { font-size: 22px; font-weight: bold; }
 
         /* 首屏横幅 */
-        .hero { background: linear-gradient(rgba(11, 61, 145, 0.85), rgba(11, 61, 145, 0.85)), url('https://images.unsplash.com/photo-1565514020179-026b92b84bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--light); padding: 120px 5%; text-align: center; }
-        .hero h1 { font-size: 42px; margin-bottom: 20px; }
-        .hero p { font-size: 20px; opacity: 0.9; }
+        .hero { background: linear-gradient(rgba(11, 61, 145, 0.85), rgba(11, 61, 145, 0.85)), url('https://images.unsplash.com/photo-1565514020179-026b92b84bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--light); padding: 150px 5%; text-align: center; }
+        .hero h1 { font-size: 42px; margin-bottom: 0; }
 
         /* 公共标题样式 */
         .section-title { text-align: center; font-size: 32px; margin-bottom: 40px; color: var(--primary); position: relative; }
@@ -43,12 +42,12 @@
         .about-content p { font-size: 18px; color: var(--black); line-height: 2; margin-bottom: 20px; text-indent: 2em; }
         .about-content p:last-child { margin-bottom: 0; }
 
-        /* 新增：图纸与实力展示区 */
+        /* 图纸与实力展示区 */
         .gallery { padding: 80px 5%; background: var(--light); }
         .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
-        .gallery-item { background: #000; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid #ddd; }
-        /* 高度固定，确保图片不变形 */
-        .gallery-item img { width: 100%; height: 200px; object-fit: cover; display: block; transition: 0.3s; }
+        /* 改成白底，这样如果图裂了不会出现黑块 */
+        .gallery-item { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; }
+        .gallery-item img { width: 100%; height: 200px; object-fit: contain; display: block; transition: 0.3s; }
         .gallery-item img:hover { transform: scale(1.05); }
         .gallery-text { text-align: center; margin-top: 20px; font-size: 16px; color: var(--black); }
 
@@ -90,7 +89,6 @@
         /* 手机端适配 */
         @media (max-width: 768px) {
             .hero h1 { font-size: 28px; }
-            .hero p { font-size: 16px; }
             .nav-contact { display: none; }
             .section-title { font-size: 26px; }
             .feature-card p { font-size: 18px; }
@@ -112,7 +110,6 @@
     <!-- 首屏横幅 -->
     <section class="hero">
         <h1>专注精品礼盒 · 异形盒 · 皮具刀模定制</h1>
-        <p>20年制模经验 / 嘉洛1500W激光机 / 隔天交货，加急6小时</p>
     </section>
 
     <!-- 核心优势 -->
@@ -144,43 +141,20 @@
         </div>
     </section>
 
-    <!-- 图纸展示（新增板块） -->
+    <!-- 图纸展示（文件名已全部替换） -->
     <section class="gallery">
         <h2 class="section-title">工程图纸与生产实力</h2>
         <p style="text-align: center; margin-bottom: 40px; font-size: 18px; color: var(--black);">精密的排版与刀线设计，是我们保证精度的第一步</p>
         <div class="gallery-grid">
-            <!-- 图1 -->
-            <div class="gallery-item">
-                <img src="cad1.png" alt="刀模排版图1">
-            </div>
-            <!-- 图2 -->
-            <div class="gallery-item">
-                <img src="cad2.png" alt="刀模排版图2">
-            </div>
-            <!-- 图3 -->
-            <div class="gallery-item">
-                <img src="cad3.png" alt="刀模排版图3">
-            </div>
-            <!-- 图4 -->
-            <div class="gallery-item">
-                <img src="cad4.png" alt="刀模排版图4">
-            </div>
-            <!-- 图5 -->
-            <div class="gallery-item">
-                <img src="cad5.png" alt="刀模排版图5">
-            </div>
-            <!-- 图6 -->
-            <div class="gallery-item">
-                <img src="cad6.png" alt="刀模排版图6">
-            </div>
-            <!-- 图7 -->
-            <div class="gallery-item">
-                <img src="cad7.png" alt="刀模排版图7">
-            </div>
-            <!-- 图8 -->
-            <div class="gallery-item">
-                <img src="cad8.png" alt="刀模排版图8">
-            </div>
+            <!-- 注意：这里的名字已经全部改成了 diemold1.png 到 diemold8.png -->
+            <div class="gallery-item"><img src="diemold1.png" alt="刀模排版图1"></div>
+            <div class="gallery-item"><img src="diemold2.png" alt="刀模排版图2"></div>
+            <div class="gallery-item"><img src="diemold3.png" alt="刀模排版图3"></div>
+            <div class="gallery-item"><img src="diemold4.png" alt="刀模排版图4"></div>
+            <div class="gallery-item"><img src="diemold5.png" alt="刀模排版图5"></div>
+            <div class="gallery-item"><img src="diemold6.png" alt="刀模排版图6"></div>
+            <div class="gallery-item"><img src="diemold7.png" alt="刀模排版图7"></div>
+            <div class="gallery-item"><img src="diemold8.png" alt="刀模排版图8"></div>
         </div>
         <p class="gallery-text">* 图为车间日常 CAD 绘图排版实拍（涵盖各类异形盒、月饼盒刀线设计）</p>
     </section>
