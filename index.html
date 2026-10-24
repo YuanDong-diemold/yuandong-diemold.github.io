@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>远东激光刀模厂 - 专注精品礼盒、皮具刀模定制</title>
+    <style>
+        /* 基础设置 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Microsoft YaHei', sans-serif; color: #333; line-height: 1.6; background-color: #f8f9fa; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* 颜色变量 */
+        :root { --primary: #0b3d91; --accent: #ff6b00; --light: #fff; --gray: #666; }
+
+        /* 顶部导航 */
+        header { background: var(--primary); color: var(--light); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo { font-size: 24px; font-weight: bold; letter-spacing: 1px; }
+        .logo span { color: var(--accent); }
+        .nav-contact { font-size: 18px; font-weight: bold; }
+
+        /* 首屏横幅 */
+        .hero { background: linear-gradient(rgba(11, 61, 145, 0.85), rgba(11, 61, 145, 0.85)), url('https://images.unsplash.com/photo-1565514020179-026b92b84bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--light); padding: 100px 5%; text-align: center; }
+        .hero h1 { font-size: 42px; margin-bottom: 20px; }
+        .hero p { font-size: 20px; margin-bottom: 40px; opacity: 0.9; }
+        .btn { display: inline-block; background: var(--accent); color: var(--light); padding: 15px 30px; font-size: 18px; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: #e65c00; transform: translateY(-2px); }
+
+        /* 核心优势区块 */
+        .section-title { text-align: center; font-size: 32px; margin-bottom: 40px; color: var(--primary); position: relative; }
+        .section-title::after { content: ''; width: 60px; height: 4px; background: var(--accent); display: block; margin: 10px auto 0; border-radius: 2px; }
+        .features { padding: 80px 5%; background: var(--light); }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature-card { background: #f8f9fa; padding: 30px; border-radius: 10px; text-align: center; border-top: 4px solid var(--primary); transition: 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .feature-card h3 { font-size: 22px; margin-bottom: 15px; color: var(--primary); }
+        .feature-card p { color: var(--gray); font-size: 16px; }
+
+        /* 产品与业务 */
+        .products { padding: 80px 5%; background: #f0f4f8; }
+        .grid-products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .product-item { background: var(--light); padding: 25px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .product-item h4 { color: var(--primary); font-size: 18px; margin-bottom: 10px; }
+        .product-item p { font-size: 14px; color: var(--gray); }
+
+        /* 设备与实力 */
+        .equipment { padding: 80px 5%; background: var(--light); }
+        .equip-list { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .equip-tag { background: #e9ecef; padding: 10px 20px; border-radius: 30px; font-weight: bold; color: var(--primary); }
+
+        /* 联系我们 */
+        .contact { background: var(--primary); color: var(--light); padding: 60px 5%; text-align: center; }
+        .contact p { font-size: 18px; margin-bottom: 15px; }
+        .contact .highlight { font-size: 32px; color: var(--accent); font-weight: bold; margin: 20px 0; }
+        .contact .highlight a { color: var(--accent); }
+
+        /* 底部版权 */
+        footer { background: #051a40; color: #8899bb; text-align: center; padding: 20px; font-size: 14px; }
+
+        /* 手机端适配 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 16px; }
+            .nav-contact { display: none; } /* 手机上隐藏导航栏联系方式，以免拥挤 */
+            .section-title { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <div class="logo">远东<span>激光刀模厂</span></div>
+        <div class="nav-contact">☎ 加急定制: 13719417000</div>
+    </header>
+
+    <!-- 首屏横幅 -->
+    <section class="hero">
+        <h1>专注精品礼盒 · 异形盒 · 皮具刀模定制</h1>
+        <p>20年制模经验 / 嘉洛1500W激光机 / 隔天交货，加急6小时</p>
+        <a href="tel:13719417000" class="btn">立即致电：13719417000</a>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="features">
+        <h2 class="section-title">为什么选择远东</h2>
+        <div class="grid-3">
+            <div class="feature-card">
+                <h3>⚡ 极速交期</h3>
+                <p>常规订单<strong>隔天交货</strong>，加急订单最快<strong>6小时</strong>完成。不耽误客户生产进度。</p>
+            </div>
+            <div class="feature-card">
+                <h3>🛠️ 硬核设备</h3>
+                <p>配备嘉洛激光机1500瓦、弯刀机、切线机。硬件实力保证木板刀模切割精度与效率。</p>
+            </div>
+            <div class="feature-card">
+                <h3>👨‍🏭 资深团队</h3>
+                <p>20多年老厂，核心团队8人，<strong>老师傅平均工龄8年以上</strong>，经验丰富，懂图更懂盒型。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主营业务 -->
+    <section class="products">
+        <h2 class="section-title">主营刀模定制</h2>
+        <div class="grid-products">
+            <div class="product-item">
+                <h4>精装书型盒刀模</h4>
+                <p>精准开槽，折角完美</p>
+            </div>
+            <div class="product-item">
+                <h4>礼品盒/异形盒刀模</h4>
+                <p>支持各类复杂异形结构</p>
+            </div>
+            <div class="product-item">
+                <h4>月饼盒/化妆品盒刀模</h4>
+                <p>木板材质，经久耐用</p>
+            </div>
+            <div class="product-item">
+                <h4>亚克力皮具刀模</h4>
+                <p>皮具定制专用，切割利落</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 设备与生产规范 -->
+    <section class="equipment">
+        <h2 class="section-title">设备与生产规范</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="margin-bottom: 30px; font-size: 18px;">工厂面积约350平方米，支持 <strong>CAD、PDF、AI、CDR</strong> 等格式文件直接读取。</p>
+            <div class="equip-list" style="margin-bottom: 30px;">
+                <span class="equip-tag">嘉洛激光机 1500W</span>
+                <span class="equip-tag">自动弯刀机</span>
+                <span class="equip-tag">切线机</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section class="contact" id="contact">
+        <h2 style="font-size: 32px; margin-bottom: 30px;">获取报价 / 发送图纸</h2>
+        <p>请将您的图纸文件（CAD / PDF / AI / CDR）通过微信或电话联系我们</p>
+        <div class="highlight">📞 <a href="tel:13719417000">13719417000</a></div>
+        <p>（建议您在微信沟通时直接发送图纸，我们看图后立即给您准确答复）</p>
+        <p style="margin-top: 40px; font-size: 14px; opacity: 0.7;">地址：请在此处填写您的工厂真实地址</p>
+    </section>
+
+    <!-- 底部版权 -->
+    <footer>
+        <p>© 2024 远东激光刀模厂 - 专注礼品盒、书型盒、皮具刀模定制</p>
+        <p>技术支持：GitHub Pages (学习项目)</p>
+    </footer>
+
+</body>
+</html>
