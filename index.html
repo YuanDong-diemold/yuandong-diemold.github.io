@@ -10,7 +10,7 @@
         body { font-family: 'Microsoft YaHei', sans-serif; color: #333; line-height: 1.6; background-color: #f8f9fa; }
         a { text-decoration: none; color: inherit; }
         
-        /* 颜色变量：全部文字加深 */
+        /* 颜色变量 */
         :root { --primary: #0b3d91; --accent: #ff6b00; --light: #fff; --black: #000000; }
 
         /* 顶部导航 */
@@ -24,9 +24,11 @@
         .hero h1 { font-size: 42px; margin-bottom: 20px; }
         .hero p { font-size: 20px; opacity: 0.9; }
 
-        /* 核心优势区块 */
+        /* 公共标题样式 */
         .section-title { text-align: center; font-size: 32px; margin-bottom: 40px; color: var(--primary); position: relative; }
         .section-title::after { content: ''; width: 60px; height: 4px; background: var(--accent); display: block; margin: 10px auto 0; border-radius: 2px; }
+
+        /* 核心优势区块 */
         .features { padding: 80px 5%; background: var(--light); }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .feature-card { background: #f8f9fa; padding: 35px 25px; border-radius: 10px; text-align: center; border-top: 4px solid var(--primary); transition: 0.3s; }
@@ -34,22 +36,29 @@
         .feature-card h3 { font-size: 24px; margin-bottom: 15px; color: var(--primary); }
         .feature-card p { color: var(--black); font-size: 20px; line-height: 1.8; }
 
+        /* 关于我们（新增区块） */
+        .about { padding: 80px 5%; background: #f0f4f8; }
+        .about-content { max-width: 900px; margin: 0 auto; background: var(--light); padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .about-content h3 { color: var(--primary); font-size: 24px; margin-bottom: 20px; text-align: center; }
+        .about-content p { font-size: 18px; color: var(--black); line-height: 2; margin-bottom: 20px; text-indent: 2em; }
+        .about-content p:last-child { margin-bottom: 0; }
+
         /* 产品与业务 */
-        .products { padding: 80px 5%; background: #f0f4f8; }
+        .products { padding: 80px 5%; background: var(--light); }
         .grid-products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .product-item { background: var(--light); padding: 30px 20px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .product-item { background: #f8f9fa; padding: 30px 20px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e9ecef; }
         .product-item h4 { color: var(--primary); font-size: 20px; margin-bottom: 10px; }
         .product-item p { font-size: 16px; color: var(--black); }
 
         /* 合作客户区块 */
-        .clients { padding: 80px 5%; background: var(--light); text-align: center; }
+        .clients { padding: 80px 5%; background: #f0f4f8; text-align: center; }
         .client-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 900px; margin: 0 auto; }
-        .client-tag { background: #e9ecef; padding: 15px 25px; border-radius: 8px; font-size: 20px; font-weight: bold; color: var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .client-tag { background: var(--light); padding: 15px 25px; border-radius: 8px; font-size: 20px; font-weight: bold; color: var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 
         /* 设备与实力 */
-        .equipment { padding: 80px 5%; background: #f0f4f8; }
+        .equipment { padding: 80px 5%; background: var(--light); }
         .equip-list { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-        .equip-tag { background: var(--light); padding: 12px 24px; border-radius: 30px; font-weight: bold; color: var(--primary); font-size: 18px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .equip-tag { background: #f0f4f8; padding: 12px 24px; border-radius: 30px; font-weight: bold; color: var(--primary); font-size: 18px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 
         /* 联系我们 */
         .contact { background: var(--primary); color: var(--light); padding: 80px 5%; text-align: center; }
@@ -71,6 +80,8 @@
             .nav-contact { display: none; }
             .section-title { font-size: 26px; }
             .feature-card p { font-size: 18px; }
+            .about-content { padding: 20px; }
+            .about-content p { font-size: 16px; }
             .client-tag { font-size: 16px; padding: 10px 15px; }
             .contact .highlight { font-size: 28px; }
         }
@@ -84,7 +95,7 @@
         <div class="nav-contact">☎ 咨询电话: 13719020555</div>
     </header>
 
-    <!-- 首屏横幅（已删除按钮） -->
+    <!-- 首屏横幅 -->
     <section class="hero">
         <h1>专注精品礼盒 · 异形盒 · 皮具刀模定制</h1>
         <p>20年制模经验 / 嘉洛1500W激光机 / 隔天交货，加急6小时</p>
@@ -106,6 +117,16 @@
                 <h3>👨‍🏭 资深团队</h3>
                 <p>20多年老厂，核心团队8人，<strong>老师傅平均工龄8年以上</strong>，经验丰富，懂图更懂盒型。</p>
             </div>
+        </div>
+    </section>
+
+    <!-- 关于我们（新增） -->
+    <section class="about">
+        <h2 class="section-title">关于我们</h2>
+        <div class="about-content">
+            <h3>二十年匠心沉淀，做懂盒型的制模人</h3>
+            <p>远东激光刀模厂的核心竞争力，源于我们对“工匠精神”的坚持。我们的主笔画图师（创始人之一）深耕包装制模行业近二十年，精通各类异形盒的尺寸测量与图纸绘制，是业内难得的通用型技术骨干。凭借丰富的经验，他能精准还原客户样品，确保刀模数据严丝合缝。</p>
+            <p>稳定的团队是品质的保障。厂内员工工作满意度高，团队气氛融洽，逢年过节大家围坐聚餐，宛如一家人。正是这种踏实、融洽的“家文化”，让我们的老师傅们多年来默契配合，为您提供交期更稳、品质更放心的刀模产品。</p>
         </div>
     </section>
 
@@ -170,12 +191,11 @@
         <p>（建议您在微信沟通时直接发送图纸，我们看图后立即给您准确答复）</p>
         
         <div class="qr-code">
-            <!-- 如果你成功上传了图片，这里应该能显示 -->
-            <img src="wechat.png.jpg" alt="远东刀模微信二维码">
+            <!-- 二维码图片显示区 -->
+            <img src="wechat.png" alt="远东刀模微信二维码">
             <p style="font-size: 16px; margin-top: 10px;">长按或扫码添加微信</p>
         </div>
 
-        <!-- 已补充地址 -->
         <p style="margin-top: 40px; font-size: 18px; opacity: 0.9;">工厂地址：广州市白云区嘉禾长红村</p>
     </section>
 
