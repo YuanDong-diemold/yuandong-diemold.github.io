@@ -36,29 +36,38 @@
         .feature-card h3 { font-size: 24px; margin-bottom: 15px; color: var(--primary); }
         .feature-card p { color: var(--black); font-size: 20px; line-height: 1.8; }
 
-        /* 关于我们（新增区块） */
+        /* 关于我们区块 */
         .about { padding: 80px 5%; background: #f0f4f8; }
         .about-content { max-width: 900px; margin: 0 auto; background: var(--light); padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .about-content h3 { color: var(--primary); font-size: 24px; margin-bottom: 20px; text-align: center; }
         .about-content p { font-size: 18px; color: var(--black); line-height: 2; margin-bottom: 20px; text-indent: 2em; }
         .about-content p:last-child { margin-bottom: 0; }
 
+        /* 新增：图纸与实力展示区 */
+        .gallery { padding: 80px 5%; background: var(--light); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .gallery-item { background: #000; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid #ddd; }
+        /* 高度固定，确保图片不变形 */
+        .gallery-item img { width: 100%; height: 200px; object-fit: cover; display: block; transition: 0.3s; }
+        .gallery-item img:hover { transform: scale(1.05); }
+        .gallery-text { text-align: center; margin-top: 20px; font-size: 16px; color: var(--black); }
+
         /* 产品与业务 */
-        .products { padding: 80px 5%; background: var(--light); }
+        .products { padding: 80px 5%; background: #f0f4f8; }
         .grid-products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .product-item { background: #f8f9fa; padding: 30px 20px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e9ecef; }
+        .product-item { background: var(--light); padding: 30px 20px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e9ecef; }
         .product-item h4 { color: var(--primary); font-size: 20px; margin-bottom: 10px; }
         .product-item p { font-size: 16px; color: var(--black); }
 
         /* 合作客户区块 */
-        .clients { padding: 80px 5%; background: #f0f4f8; text-align: center; }
+        .clients { padding: 80px 5%; background: var(--light); text-align: center; }
         .client-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 900px; margin: 0 auto; }
-        .client-tag { background: var(--light); padding: 15px 25px; border-radius: 8px; font-size: 20px; font-weight: bold; color: var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .client-tag { background: #f0f4f8; padding: 15px 25px; border-radius: 8px; font-size: 20px; font-weight: bold; color: var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 
         /* 设备与实力 */
-        .equipment { padding: 80px 5%; background: var(--light); }
+        .equipment { padding: 80px 5%; background: #f0f4f8; }
         .equip-list { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-        .equip-tag { background: #f0f4f8; padding: 12px 24px; border-radius: 30px; font-weight: bold; color: var(--primary); font-size: 18px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .equip-tag { background: var(--light); padding: 12px 24px; border-radius: 30px; font-weight: bold; color: var(--primary); font-size: 18px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 
         /* 联系我们 */
         .contact { background: var(--primary); color: var(--light); padding: 80px 5%; text-align: center; }
@@ -68,10 +77,15 @@
         
         /* 二维码样式 */
         .qr-code { margin-top: 30px; }
-        .qr-code img { width: 200px; height: 200px; border-radius: 10px; border: 4px solid var(--light); background: var(--light); padding: 5px; }
+        .qr-code img { width: 200px; height: 200px; border-radius: 10px; border: 4px solid var(--light); background: var(--light); padding: 5px; object-fit: contain; }
 
         /* 底部版权 */
         footer { background: #051a40; color: #8899bb; text-align: center; padding: 20px; font-size: 14px; }
+
+        /* 平板端适配 */
+        @media (max-width: 992px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
 
         /* 手机端适配 */
         @media (max-width: 768px) {
@@ -120,7 +134,7 @@
         </div>
     </section>
 
-    <!-- 关于我们（新增） -->
+    <!-- 关于我们 -->
     <section class="about">
         <h2 class="section-title">关于我们</h2>
         <div class="about-content">
@@ -128,6 +142,47 @@
             <p>远东激光刀模厂的核心竞争力，源于我们对“工匠精神”的坚持。我们的主笔画图师（创始人之一）深耕包装制模行业近二十年，精通各类异形盒的尺寸测量与图纸绘制，是业内难得的通用型技术骨干。凭借丰富的经验，他能精准还原客户样品，确保刀模数据严丝合缝。</p>
             <p>稳定的团队是品质的保障。厂内员工工作满意度高，团队气氛融洽，逢年过节大家围坐聚餐，宛如一家人。正是这种踏实、融洽的“家文化”，让我们的老师傅们多年来默契配合，为您提供交期更稳、品质更放心的刀模产品。</p>
         </div>
+    </section>
+
+    <!-- 图纸展示（新增板块） -->
+    <section class="gallery">
+        <h2 class="section-title">工程图纸与生产实力</h2>
+        <p style="text-align: center; margin-bottom: 40px; font-size: 18px; color: var(--black);">精密的排版与刀线设计，是我们保证精度的第一步</p>
+        <div class="gallery-grid">
+            <!-- 图1 -->
+            <div class="gallery-item">
+                <img src="cad1.png" alt="刀模排版图1">
+            </div>
+            <!-- 图2 -->
+            <div class="gallery-item">
+                <img src="cad2.png" alt="刀模排版图2">
+            </div>
+            <!-- 图3 -->
+            <div class="gallery-item">
+                <img src="cad3.png" alt="刀模排版图3">
+            </div>
+            <!-- 图4 -->
+            <div class="gallery-item">
+                <img src="cad4.png" alt="刀模排版图4">
+            </div>
+            <!-- 图5 -->
+            <div class="gallery-item">
+                <img src="cad5.png" alt="刀模排版图5">
+            </div>
+            <!-- 图6 -->
+            <div class="gallery-item">
+                <img src="cad6.png" alt="刀模排版图6">
+            </div>
+            <!-- 图7 -->
+            <div class="gallery-item">
+                <img src="cad7.png" alt="刀模排版图7">
+            </div>
+            <!-- 图8 -->
+            <div class="gallery-item">
+                <img src="cad8.png" alt="刀模排版图8">
+            </div>
+        </div>
+        <p class="gallery-text">* 图为车间日常 CAD 绘图排版实拍（涵盖各类异形盒、月饼盒刀线设计）</p>
     </section>
 
     <!-- 主营业务 -->
@@ -191,8 +246,7 @@
         <p>（建议您在微信沟通时直接发送图纸，我们看图后立即给您准确答复）</p>
         
         <div class="qr-code">
-            <!-- 二维码图片显示区 -->
-            <img src="wechat.png" alt="远东刀模微信二维码">
+            <img src="wechat.png.jpg" alt="远东刀模微信二维码">
             <p style="font-size: 16px; margin-top: 10px;">长按或扫码添加微信</p>
         </div>
 
